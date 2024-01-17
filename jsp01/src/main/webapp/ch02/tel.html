@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<form>
+		Phone number :
+		<!--required: 입력값 체크-->
+		<input type="tel" name="tel" required 
+		pattern="[0-9]{2,3}-[0-9]{4}-[0-9]{4}" title="###-####-####"><br>
+		<!--	 정규표현식 → 패턴 지정-->
+		<input type="submit" value="OK">
+	</form>
+</body>
+
+</html>

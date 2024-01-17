@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function check() {
+			let price = document.form1.price.value;
+			let amount = document.form1.amount.value;
+
+			if (price == "") {
+				alert("Enter the price");
+				document.form1.price.focus();
+				return;
+			}
+			if (amount == "") {
+				alert("Enter the quantity");
+				document.form1.amount.focus();
+				return;
+			}
+			document.form1.submit();
+		}	
+	</script>
+
+</head>
+
+<body>
+
+	<form name="form1" action="button.jsp" method="post">
+		price: <input type="text" name="price"><br>
+		amount: <input type="text" name="amount"><br>
+		<button type="button" onclick="check()">OK</button>
+		<!-- input type: button → 모양o, 기능x. onclick으로 check()함수기능 호출 -->
+	</form>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<!--jQuery 라이브러리 활용: url에서 다운로드 받아서 사용-->
+	<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		function check() {
+			let kor = $("#kor");	
+			//javascript 명령어: document.getElementById("kor")
+			let eng = $("#eng");
+			let mat = $("#mat");
+			exp = /^[0-9]+$/;	
+			//정규표현식 → ^(hat):시작, [사용가능한 입력값], +:반복, $:끝
+			if (!kor.val().match(exp)) {
+				//kor.val() → 태그에 입력한 값(value)
+				//입력값.match(표현식) → 표현식 형식과 같은면 T, 다르면 F
+				alert("국어점수를 입력하세요.");
+				kor.focus();
+				return
+			}
+			if (!eng.val().match(exp)) {
+				alert("영어점수를 입력하세요.");
+				eng.focus();
+				return
+			}
+			if (!mat.val().match(exp)) {
+				alert("수학점수를 입력하세요.");
+				mat.focus();
+				return
+			}
+			document.form1.submit();  //서버에 제출
+		}
+	</script>
+</head>
+
+<body>
+	<h2>점수계산</h2>
+	<form name="form1" action="/jsp01/ch02_servlet/point.do" method="post">
+		이름: <input type="text" name="name" id="name"><br>
+		국어: <input type="text" name="kor" id="kor"><br>
+		영어: <input type="text" name="eng" id="eng"><br>
+		수학: <input type="text" name="mat" id="mat"><br>
+		<!--name → 중복가능, 서버에서 체크할 때 사용
+			id → 중복불가, 문서에서 태그를 빠르게 조회할 때 사용-->
+		<input type="button" value="확인" onclick="check()">
+	</form>
+</body>
+
+</html>

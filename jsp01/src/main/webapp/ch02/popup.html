@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function winopen() {
+			num = document.getElementById("num").value;
+			window.open("multi_table_popup.jsp?num=" + num, "", "width=300, height=500");
+			/*window.open(url, id, option) 팝업창 열기*/
+		}
+	</script>
+</head>
+
+<body>
+	<form name="form1">
+		number:
+		<input type="text" id="num" name="num" value="3" size="10">
+		<input type="button" value="팝업창 열기" onclick="winopen()">
+	</form>
+</body>
+
+</html>

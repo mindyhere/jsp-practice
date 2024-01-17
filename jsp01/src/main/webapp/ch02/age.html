@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+
+	<!--Javascript: client의 browser에서 실행. interpreter-->
+	<script>
+		function check() {
+			/*리턴타입 X*/
+
+			/*
+			let 변수명 → 변수선언(자료형X)	cf.var → 변수
+			const 변수명 → 상수
+			*/
+			let name = document.getElementById("name");
+			let year = document.getElementById("year");
+			/*
+			document 자바스크립트 내장객체, 현재 페이지.
+			getElementById 태그 id로 태그조회
+			*/
+			if (name.value == "") {
+				alert("이름을 입력하세요.");  /*경고창*/
+				name.focus();
+				return;	/*함수종료 + 값전달*/
+			}
+			if (year.value == "") {
+				alert("연도를 입력하세요.");
+				year.focus();
+				return;
+			}
+			document.form1.submit();
+			/*현재문서  name   제출*/
+		}
+	</script>
+
+</head>
+
+<body>
+	<h2>나이 계산</h2>
+
+	<!--서버에 전달하는 입력양식-->
+	<form name="form1" method="post" action="age.jsp">
+		<!--폼이름	 post전달 ↔ get읽기 목적지-->
+		이름: <input type="text" name="name" id="name"><br>
+		연도: <input type="text" name="year" id="year"><br>
+		<input type="button" value="확인" onclick="check()">
+		<!--		 제출:버튼모양, 기능x		함수호출 -->
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<form action="select.jsp" method="post">
+		<select name="car">
+		<!-- <select name="car" multiple> 다중선택(ctrl) 가능-->
+		<!-- <select name="car" size="3"> 보여지는 아이템 개수 조절-->
+			<!--드롭다운리스트 아이템	-->
+			<option value="bmw">BMW</option>
+			<!--      저장되는 값  	화면표시-->
+			<option value="benz" selected>Benz</option>
+			<!--      selected 기본 선택값-->
+			<option value="hyundai">Hyundai</option>
+			<option value="kia">Kia</option>
+		</select>
+		<input type="submit" value="OK">
+	</form>
+</body>
+
+</html>
