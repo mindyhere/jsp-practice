@@ -14,7 +14,7 @@ public class DB {
 			Context ctx = new InitialContext();
 			// context.xml 분석기
 			ds = (DataSource) ctx.lookup("java:comp/env/oraDB"); // java:comp/env/리소스태그이름
-			conn = ds.getConnection();
+			conn = ds.getConnection();	//dbcp에서 1개의 커넥션 받음
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

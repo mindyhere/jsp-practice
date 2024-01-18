@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Member ex.</title>
 </head>
 <body>
 	<!-- index.jsp 시작페이지 → model : Controller.java → list.jsp 결과페이지(출력) -->

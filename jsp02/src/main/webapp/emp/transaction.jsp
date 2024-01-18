@@ -7,10 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%@ page import="emp.EmpDAO"%>
 	<%
-	//request.setAttribute(key, value) ↔ request.getAttribute(key)
-	int sum = (Integer)request.getAttribute("sum");
-	out.println("sum" + sum);
+	EmpDAO dao = new EmpDAO();
+	dao.insert();
+	dao.insert_batch();
+	out.println("완료되었습니다.");
 	%>
 </body>
 </html>

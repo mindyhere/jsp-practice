@@ -11,7 +11,9 @@
 	<%
 	Map map = (Map) request.getAttribute("point");
 	String name = (String) map.get("name");
-	int kor = (int) map.get("kor");
+	
+	//map에 저장된 value 를 get : (자료형)map.get("변수명")
+	int kor = (int) map.get("kor"); 
 	int eng = (int) map.get("eng");
 	int mat = (int) map.get("mat");
 	int total = (int) map.get("total");

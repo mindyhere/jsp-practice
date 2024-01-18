@@ -3,6 +3,7 @@ package book;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,5 +56,37 @@ public class BookDAO {
 
 		}
 		return items;
+	}
+
+	public void insert(BookDTO dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			conn = DB.dbConn();
+			String sql = "insert into books (idx, title, author, price, amount) values ((select nvl(max(idx)+1,1)from books), ?, ?, ?, ?)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, dto.getTitle());
+			pstmt.setString(2, dto.getAuthor());
+			pstmt.setInt(3, dto.getPrice());
+			pstmt.setInt(4, dto.getAmount());
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();// TODO: handle exception
+			}
+			try {
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();// TODO: handle exception
+			}
+		}
 	}
 }

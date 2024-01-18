@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+// html 입력 → controller 계산 → result.jsp 결과출력	
 @WebServlet("/gugu.do")
 public class GuguController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -21,7 +22,7 @@ public class GuguController extends HttpServlet {
 			result += dan + "x" + i + "=" + dan * i + "<br>";
 		}
 		request.setAttribute("result", result);
-		RequestDispatcher rd = request.getRequestDispatcher("/ch02/gugu_result2.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/ch02/gugu_result2.jsp"); //결과출력 페이지 주소
 		rd.forward(request, response);
 	}
 

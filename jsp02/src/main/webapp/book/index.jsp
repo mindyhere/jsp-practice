@@ -4,13 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Book ex.</title>
 </head>
 <body>
 	<%
-	//request.setAttribute(key, value) ↔ request.getAttribute(key)
-	int sum = (Integer)request.getAttribute("sum");
-	out.println("sum" + sum);
+	response.sendRedirect("/jsp02/book_servlet/list.do");
+	//응답처리(내장객체)
 	%>
 </body>
 </html>
