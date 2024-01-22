@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>ajax1 ex.</title>
+	<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(function () {
+			$("#button1").click(function () {
+				let num = $("#num").val();
+				// 변수 ← #num:id가 num 인 태그의 value(값)
+
+				// 백그라운드 실행
+				$.ajax({
+					type: "post",
+					url: "result1.jsp",	// 백그라운드 주소
+					data: {"num": num},	// 파라미터{key, value}
+
+					//콜백(call back)
+					success: function (txt) { // txt → response text
+					console.log(txt);
+						$("#result").html(txt);	// ↔ document.getElementById("result").innerHTML=txt
+					}
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h2>동기식</h2>
+	<form action="result1.jsp">
+		number: <input type="text" name="num">
+		<input type="submit" value="확인">
+	</form>
+
+	<h2>비동기식</h2>
+	number: <input type="text" id="num">
+	<input type="button" id="button1" value="확인">
+	<div id="result">결과출력 영역</div>
+</body>
+
+</html>

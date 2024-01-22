@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/jsp02/member_servlet/join.do" method="post">
+	<form action="/jsp02/member_servlet/join.do" method="post"> 
 	아이디 : <input name="userid"><br>
 	비밀번호 : <input type="password" name="passwd"><br>
 	이름 : <input name="name"><br>

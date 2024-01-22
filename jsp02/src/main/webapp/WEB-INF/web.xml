@@ -9,18 +9,12 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-  
-  <!-- servlet 클래스의 정보 -->
   <servlet>
     <servlet-name>BookController</servlet-name>
     <servlet-class>book.BookController</servlet-class>
-    <!-- 실제 클래스의 경로 -->
   </servlet>
-  
-  <!-- servlet 호출 매핑정보 -->
   <servlet-mapping>
     <servlet-name>BookController</servlet-name>
     <url-pattern>/book_servlet/*</url-pattern>
-    <!-- URL 연결 규칙 -->
   </servlet-mapping>
 </web-app>

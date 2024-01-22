@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>ajax login ex.</title>
+	<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(function () {
+			$("#btnLogin").click(function () {
+				let id = $("#id").val();
+				let pwd = $("#pwd").val();
+				let params = {"id": id, "pwd": pwd};	// {변수:값, 변수:값, ...}
+
+				$.ajax({
+					type: "post",
+					url: "result2.jsp",	// 백그라운드 실행 주소
+					data: params,	// 전달할 데이터
+
+					// txt: "result2.jsp" 에서 출력한 결과. response text
+					success: function (txt) {
+						$("#div1").html(txt);	// 현재 페이지에 결과출력
+					}
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	아이디 : <input id="id"><br>
+	비밀번호 : <input type="password" id="pwd"><br>
+	<input type="button" value="확인" id="btnLogin">
+	<div id="div1">결과 출력 영역</div>
+</body>
+
+</html>
