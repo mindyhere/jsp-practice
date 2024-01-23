@@ -6,6 +6,12 @@
 	<title>ajax1 ex.</title>
 	<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script>
+		/*
+		$(태그)
+		$("p")
+		$("#p1") id가 p1인 태그
+		$(".p1") class가 p1인 태그
+		*/
 		$(function () {
 			$("#button1").click(function () {
 				let num = $("#num").val();
@@ -19,7 +25,7 @@
 
 					//콜백(call back)
 					success: function (txt) { // txt → response text
-					console.log(txt);
+						console.log(txt);
 						$("#result").html(txt);	// ↔ document.getElementById("result").innerHTML=txt
 					}
 				});

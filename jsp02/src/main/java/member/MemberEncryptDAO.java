@@ -14,6 +14,7 @@ public class MemberEncryptDAO {
 		try {
 			conn = DB.dbConn();
 			String sql = "insert into member values (?, MYPACK.ENCRYPT(?), ?)";
+			//										 1,  패키지.함수(전달값 2),3 
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getUserid());
 			pstmt.setString(2, dto.getPasswd());

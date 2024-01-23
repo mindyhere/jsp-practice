@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>keyword ex.</title>
+	<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(function () {
+			//keydown 입력중 ↔ keyup 입력완료
+			$("#search").keyup(function () {
+				let search = $("#search").val();	//키 입력값
+				if (search.length == 0) {
+					$("#div1").css("visibility", "hidden");
+				} else {
+					$("#div1").css("visibility", "visible");
+					$.ajax({
+						url: "result3.jsp",
+						data: {"search": search},
+						
+						//콜백함수, txt=출력결과
+						success: function (txt) {
+							$("#div1").html(txt);
+						}
+					});
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	키워드를 입력하세요. : <input type="text" id="search">
+	<div id="div1">검색결과 출력영역</div>
+</body>
+
+</html>

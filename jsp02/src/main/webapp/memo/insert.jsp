@@ -15,7 +15,7 @@
 	MemoDTO dto = new MemoDTO();
 	dto.setWriter(writer);
 	dto.setMemo(memo);
-	dto.setIp(request.getRemoteAddr());
+	dto.setIp(request.getRemoteAddr()); // 클라이언트(사용자) ip 주소
 	
 	MemoDAO dao = new MemoDAO();
 	dao.insert_memo(dto);

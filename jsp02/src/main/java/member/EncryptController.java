@@ -15,8 +15,8 @@ public class EncryptController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String url = request.getRequestURI();
-		String context = request.getContextPath();
+		String url = request.getRequestURI(); // 요청한 주소
+		String context = request.getContextPath(); // 컨텍스트 /jsp02
 		MemberEncryptDAO dao = new MemberEncryptDAO();
 
 		if (url.indexOf("join.do") != -1) {

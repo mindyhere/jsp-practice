@@ -21,11 +21,11 @@ public class MemoDAO {
 		try {
 			conn = DB.dbConn();
 			String sql = "{call memo_list_p(?)}";
-			cstmt = conn.prepareCall(sql);
-			cstmt.registerOutParameter(1, OracleTypes.CURSOR);
-			cstmt.execute();
+			cstmt = conn.prepareCall(sql); // 프로시저 실행객체 생성
+			cstmt.registerOutParameter(1, OracleTypes.CURSOR); // 출력매개변수의 자료형 지정
+			cstmt.execute(); // 프로시저 호출
 			rs = (ResultSet) cstmt.getObject(1);
-
+			// (ResultSet) ← 커서 → 레코드집합 주소값
 			while (rs.next()) {
 				int idx = rs.getInt("idx");
 				String writer = rs.getString("writer");
@@ -65,12 +65,13 @@ public class MemoDAO {
 
 	public void insert_memo(MemoDTO dto) {
 		Connection conn = null;
-		CallableStatement cstmt = null;
+		CallableStatement cstmt = null; // 프로시저 실행
 
 		try {
 			conn = DB.dbConn();
 			String sql = "{call memo_insert_p(?,?,?)}";
-			cstmt = conn.prepareCall(sql);
+			// {call 프로시저(전달값)}, ? → 1,2,3
+			cstmt = conn.prepareCall(sql); // 프로시저 실행객체 생성
 			cstmt.setString(1, dto.getWriter());
 			cstmt.setString(2, dto.getMemo());
 			cstmt.setString(3, dto.getIp());
