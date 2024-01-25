@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="memo">
+	<select id="list" resultType="java.util.Map">
+		SELECT idx, writer, memo, to_char( post_date, 'yyyy-mm-dd hh24:mi:ss') post_date
+			from memo
+			where ${search_option} like '%'|| #{search} ||'%'
+			order by idx desc 
+	</select>
+	
+	<select id="list_all" resultType="java.util.Map">
+		select idx, writer, memo, to_char(post_date, 'yyyy-mm-dd hh24:mi:ss') post_date
+			from memo
+			where writer like '%' || #{search} || '%' 
+				or memo like '%' || #{search} || '%' 
+			order by idx desc
+	</select>
+	
+	<select id="view" resultType="java.util.Map">
+		select * from memo where idx=#{idx}
+	</select>
+	
+	<insert id="insert">
+		insert into memo (idx, writer, memo) values ((select nvl(max(idx)+1,1) from memo), #{writer}, #{memo})
+	</insert>
+	
+	<update id="update">
+		update memo set writer=#{writer}, memo=#{memo}
+			where idx=#{idx} 
+	</update>
+	
+	<delete id="delete">
+		delete from memo where idx=#{idx}
+	</delete>
+</mapper>
