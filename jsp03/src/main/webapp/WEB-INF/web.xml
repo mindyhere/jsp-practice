@@ -35,4 +35,12 @@
     <servlet-name>ProductController</servlet-name>
     <url-pattern>/product_servlet/*</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>SurveyController</servlet-name>
+    <servlet-class>survey.SurveyController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SurveyController</servlet-name>
+    <url-pattern>/survey_servlet/*</url-pattern>
+  </servlet-mapping>
 </web-app>

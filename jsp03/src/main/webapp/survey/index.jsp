@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>survey index</title>
 </head>
 <body>
 	<%
-	// 서블릿 호출 (/product_servlet/list.do)
-	response.sendRedirect("/jsp03/product_servlet/list.do");
+	response.sendRedirect(request.getContextPath() + "/survey_servlet/input.do");
 	%>
 </body>
 </html>
