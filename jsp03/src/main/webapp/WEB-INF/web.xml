@@ -43,4 +43,12 @@
     <servlet-name>SurveyController</servlet-name>
     <url-pattern>/survey_servlet/*</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>GuestbookController</servlet-name>
+    <servlet-class>guestbook.GuestbookController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GuestbookController</servlet-name>
+    <url-pattern>/gb_servlet/*</url-pattern>
+  </servlet-mapping>
 </web-app>

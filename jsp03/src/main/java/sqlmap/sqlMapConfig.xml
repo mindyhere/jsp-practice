@@ -21,6 +21,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="memo/memo.xml" />
 		<mapper resource="product/product.xml" />
 		<mapper resource="survey/survey.xml" />
+		<mapper resource="guestbook/guestbook.xml" />
 	</mappers>
 </configuration>
 
