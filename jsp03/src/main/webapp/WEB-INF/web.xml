@@ -51,4 +51,28 @@
     <servlet-name>GuestbookController</servlet-name>
     <url-pattern>/gb_servlet/*</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>PageController</servlet-name>
+    <servlet-class>page.PageController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PageController</servlet-name>
+    <url-pattern>/page_servlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UploadController</servlet-name>
+    <servlet-class>board.UploadController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadController</servlet-name>
+    <url-pattern>/upload.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BoardController</servlet-name>
+    <servlet-class>board.BoardController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BoardController</servlet-name>
+    <url-pattern>/board_servlet/*</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -30,7 +30,7 @@ public class GuestbookDAO {
 		String contents = dto.getContents();
 		contents = contents.replace("<", "&lt;");
 		contents = contents.replace(">", "&gt;");
-		contents = contents.replace("\n", "<br>;");
+		contents = contents.replace("\n", "<br>");
 		contents = contents.replace("  ", "&nbsp&nbsp;");
 		dto.setContents(contents);
 		session.insert("guestbook.insert", dto);
@@ -66,7 +66,7 @@ public class GuestbookDAO {
 		String contents = dto.getContents();
 		contents = contents.replace("<", "&lt;");
 		contents = contents.replace(">", "&gt;");
-		contents = contents.replace("\n", "<br>;");
+		contents = contents.replace("\n", "<br>");
 		contents = contents.replace("  ", "&nbsp&nbsp;");
 		dto.setContents(contents);
 		session.update("guestbook.update", dto);

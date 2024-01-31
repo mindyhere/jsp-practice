@@ -52,15 +52,15 @@
 <form name="form1" id="form1" method="post">
 	<table border="1" style="width: 500px">
 		<tr>
-			<td style="text-align: center"; background-color="cyan">이름</td>
+			<td style="text-align: center; background-color:cyan">이름</td>
 			<td><input type="text" name="name" id="name" size="40" value="${dto.name }"></td>
 		</tr>
 		<tr>
-			<td style="text-align: center"; background-color="cyan">이메일</td>
+			<td style="text-align: center; background-color:cyan">이메일</td>
 			<td><input type="text" name="email" id="email" size="40" value="${dto.email }"></td>
 		</tr>
 		<tr>
-			<td style="text-align: center"; background-color="cyan">비밀번호</td>
+			<td style="text-align: center; background-color:cyan">비밀번호</td>
 			<td><input type="password" name="passwd" id="passwd" size="40" value="${dto.passwd}"></td>
 		</tr>
 		<tr  align="center">
