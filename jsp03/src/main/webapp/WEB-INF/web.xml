@@ -10,8 +10,6 @@
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
   <servlet>
-    <description></description>
-    <display-name>EncodingFilter</display-name>
     <servlet-name>EncodingFilter</servlet-name>
     <servlet-class>common.EncodingFilter</servlet-class>
   </servlet>
@@ -26,14 +24,6 @@
   <servlet-mapping>
     <servlet-name>MemoController</servlet-name>
     <url-pattern>/memo_servlet/*</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>ProductController</servlet-name>
-    <servlet-class>product.ProductController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ProductController</servlet-name>
-    <url-pattern>/product_servlet/*</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>SurveyController</servlet-name>
@@ -74,5 +64,53 @@
   <servlet-mapping>
     <servlet-name>BoardController</servlet-name>
     <url-pattern>/board_servlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AdminController</servlet-name>
+    <servlet-class>shop.AdminController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminController</servlet-name>
+    <url-pattern>/admin_servlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ProductController</servlet-name>
+    <servlet-class>shop.ProductController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductController</servlet-name>
+    <url-pattern>/product_servlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>shop.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/login_servlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CartController</servlet-name>
+    <servlet-class>shop.CartController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CartController</servlet-name>
+    <url-pattern>/cart_servlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PdfController</servlet-name>
+    <servlet-class>pdf.PdfController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PdfController</servlet-name>
+    <url-pattern>/pdf_servlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ChartController</servlet-name>
+    <servlet-class>chart.ChartController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChartController</servlet-name>
+    <url-pattern>/chart_servelt/*</url-pattern>
   </servlet-mapping>
 </web-app>

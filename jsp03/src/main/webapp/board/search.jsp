@@ -22,7 +22,7 @@
 </head>
 <body>
 	<h2>게시판</h2>
-	<form name="form1" method="post" action="/jsp03/board_servlet/search.do" >
+	<form name="form1" method="post" action="/jsp03/board_servlet/serach.do" >
 		<select name="search_option">
 			<c:choose>
 				<c:when test="${search_option == null || search_option=='all' }">
@@ -124,29 +124,6 @@
 				
 			</td>
 		</tr>
-
-		<%-- 기본 자바문법으로 작성
-		<%@ page import="java.util.List" %>
-		<%@ page import="board.BoardDTO" %>
-		<%
-		List<BoardDTO> list = (List<BoardDTO>) request.getAttribute("list");
-		for (int i = 0; i < list.size(); i++) {
-			// Board dto : list 
-			BoardDTO dto = list.get(i);
-		%>
-		<tr>
-			<td><%=dto.getNum()%></td>
-			<td><%=dto.getWriter()%></td>
-			<td><%=dto.getSubject()%></td>
-			<td><%=dto.getReg_date()%></td>
-			<td><%=dto.getHit()%></td>
-			<td><%=dto.getFilename()%></td>
-			<td><%=dto.getDown()%></td>
-		</tr>
-		<%
-		}
-		%> 
-		--%>
 	</table>
 </body>
 </html>
