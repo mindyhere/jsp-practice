@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="http://www.google.com/jsapi"></script> // 구글차트 호출
+<!-- 구글차트 호출 -->
+<script src="http://www.google.com/jsapi"></script>
 <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
 	google.load(

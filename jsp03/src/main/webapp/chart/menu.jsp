@@ -9,7 +9,7 @@
 <body>
 <a href="/jsp03/chart/chart01.jsp">구글차트(json)</a><br>
 <a href="/jsp03/chart/chart02.jsp">구글차트(db)</a><br>
-<a href="/jsp03/chart_servlet.jfree_chart1.do">JFreeChart(image)</a><br>
-<a href="/jsp03/chart_servlet.jfree_chart2.do">JFreeChart(pdf)</a><br>
+<a href="/jsp03/chart_servlet/jfree_chart1.do">JFreeChart(image)</a><br>
+<a href="/jsp03/chart_servlet/jfree_chart2.do">JFreeChart(pdf)</a><br>
 </body>
 </html>

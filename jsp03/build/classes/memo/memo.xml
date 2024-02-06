@@ -21,9 +21,14 @@
 		select * from memo where idx=#{idx}
 	</select>
 	
-	<insert id="insert">
+<!-- 	<insert id="insert">
 		insert into memo (idx, writer, memo) values ((select nvl(max(idx)+1,1) from memo), #{writer}, #{memo})
-	</insert>
+	</insert> -->
+	
+	<insert id="insert">
+		insert into memo ( idx, writer, memo, post_date ) values 
+		((select nvl(max(idx)+1,1) from memo), #{writer}, #{memo}, sysdate)
+    </insert>
 	
 	<update id="update">
 		update memo set writer=#{writer}, memo=#{memo}

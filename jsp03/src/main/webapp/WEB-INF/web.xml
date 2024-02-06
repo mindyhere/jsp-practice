@@ -111,6 +111,14 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ChartController</servlet-name>
-    <url-pattern>/chart_servelt/*</url-pattern>
+    <url-pattern>/chart_servlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EmailController</servlet-name>
+    <servlet-class>email.EmailController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmailController</servlet-name>
+    <url-pattern>/email_servlet/*</url-pattern>
   </servlet-mapping>
 </web-app>
